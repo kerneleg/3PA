@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
 			// firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
 			$('body').toggleClass('overflow-hidden');
 		});
-		$('#cd-lateral-nav').toggleClass('lateral-menu-is-open');
+		$('#cd_lateral_nav').toggleClass('lateral-menu-is-open');
 		
 		//check if transitions are not supported - i.e. in IE9
 		if($('html').hasClass('no-csstransitions')) {
@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
 			$content_wrapper.removeClass('lateral-menu-is-open').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 				$('body').removeClass('overflow-hidden');
 			});
-			$('#cd-lateral-nav').removeClass('lateral-menu-is-open');
+			$('#cd_lateral_nav').removeClass('lateral-menu-is-open');
 			//check if transitions are not supported
 			if($('html').hasClass('no-csstransitions')) {
 				$('body').removeClass('overflow-hidden');
@@ -39,8 +39,8 @@ jQuery(document).ready(function($){
 	});
 
 	//open (or close) submenu items in the lateral menu. Close all the other open submenu items.
-	$('.item-has-children').children('a').on('click', function(event){
+	$('.item_has_children').children('a').on('click', function(event){
 		event.preventDefault();
-		$(this).toggleClass('submenu-open').next('.sub-menu').slideToggle(200).end().parent('.item-has-children').siblings('.item-has-children').children('a').removeClass('submenu-open').next('.sub-menu').slideUp(200);
+		$(this).toggleClass('submenu-open').next('.sub_menu').slideToggle(200).end().parent('.item_has_children').siblings('.item_has_children').children('a').removeClass('submenu-open').next('.sub_menu').slideUp(200);
 	});
 });

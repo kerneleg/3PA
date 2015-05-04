@@ -257,7 +257,7 @@ header.is-fixed {
   }
 }
 
-#cd-lateral-nav {
+#cd_lateral_nav {
   position: fixed;
   height: 100%;
   right: 0;
@@ -281,32 +281,32 @@ header.is-fixed {
   -o-transform: translateX(80px);
   transform: translateX(80px);
 }
-#cd-lateral-nav .cd-navigation {
+#cd_lateral_nav .cd_navigation {
   margin: 10px 0 16px;
 }
-#cd-lateral-nav .sub-menu {
+#cd_lateral_nav .sub_menu {
   padding: 0 10px 20px 15px;
   display: none;
 }
-#cd-lateral-nav a {
+#cd_lateral_nav a {
   display: block;
   line-height: 2em;
   padding: 0 16px 0 32px;
   color: #aab5b7;
 }
-#cd-lateral-nav a.current {
+#cd_lateral_nav a.current {
   background-color: #3a4a4d;
   color: #FFF;
 }
-.no-touch #cd-lateral-nav a:hover {
+.no-touch #cd_lateral_nav a:hover {
   color: #FFF;
 }
 @media only screen and (min-width: 768px) {
-  #cd-lateral-nav .cd-navigation {
+  #cd_lateral_nav .cd_navigation {
     margin: 20px 0;
   }
 }
-#cd-lateral-nav.lateral-menu-is-open {
+#cd_lateral_nav.lateral-menu-is-open {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -321,13 +321,13 @@ header.is-fixed {
 }
 
 /* style menu items which have a submenu  */
-#cd-lateral-nav .item-has-children > a {
+#cd_lateral_nav .item_has_children > a {
   position: relative;
   text-transform: uppercase;
   font-weight: 600;
   /* this is the right arrow to show that the item has a submenu  */
 }
-#cd-lateral-nav .item-has-children > a::after {
+#cd_lateral_nav .item_has_children > a::after {
   content: '';
   display: block;
   height: 11px;
@@ -350,7 +350,7 @@ header.is-fixed {
   -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-#cd-lateral-nav .item-has-children > a.submenu-open::after {
+#cd_lateral_nav .item_has_children > a.submenu-open::after {
   -webkit-transform: translateY(-50%) rotate(90deg);
   -moz-transform: translateY(-50%) rotate(90deg);
   -ms-transform: translateY(-50%) rotate(90deg);
@@ -358,15 +358,15 @@ header.is-fixed {
   transform: translateY(-50%) rotate(90deg);
 }
 
-#cd-lateral-nav .socials {
+#cd_lateral_nav .socials {
   padding: 0 32px;
 }
-#cd-lateral-nav .socials:after {
+#cd_lateral_nav .socials:after {
   content: "";
   display: table;
   clear: both;
 }
-#cd-lateral-nav .socials a {
+#cd_lateral_nav .socials a {
   height: 32px;
   width: 32px;
   float: left;
@@ -378,32 +378,32 @@ header.is-fixed {
   margin-right: .5em;
   border-radius: 0.25em;
 }
-#cd-lateral-nav .socials a.cd-twitter {
+#cd_lateral_nav .socials a.cd-twitter {
   background-position: 0 0;
 }
-#cd-lateral-nav .socials a.cd-github {
+#cd_lateral_nav .socials a.cd-github {
   background-position: -32px 0;
 }
-#cd-lateral-nav .socials a.cd-facebook {
+#cd_lateral_nav .socials a.cd-facebook {
   background-position: -64px 0;
 }
-#cd-lateral-nav .socials a.cd-google {
+#cd_lateral_nav .socials a.cd-google {
   background-position: -96px 0;
 } 
- l-nav .socialals o-touch #cd-lateral-nav .socials a:
-.no-touch #cd-lateral-nav .socials a:hover {
+ l-nav .socialals o-touch #cd_lateral_nav .socials a:
+.no-touch #cd_lateral_nav .socials a:hover {
   background-color: #4e6361;
 }
-.no-touch #cd-lateral-nav .socials a:hover.cd-twitter {
+.no-touch #cd_lateral_nav .socials a:hover.cd-twitter {
   background-position: 0 -32px;
 }
-.no-touch #cd-lateral-nav .socials a:hover.cd-github {
+.no-touch #cd_lateral_nav .socials a:hover.cd-github {
   background-position: -32px -32px;
 }
-.no-touch #cd-lateral-nav .socials a:hover.cd-facebook {
+.no-touch #cd_lateral_nav .socials a:hover.cd-facebook {
   background-position: -64px -32px;
 }
-.no-touch #cd-lateral-nav .socials a:hover.cd-google {
+.no-touch #cd_lateral_nav .socials a:hover.cd-google {
   background-position: -96px -32px;
 }
 .loginpanel {
