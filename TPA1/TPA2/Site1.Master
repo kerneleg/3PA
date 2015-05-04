@@ -37,20 +37,20 @@
 
 	</main> <!-- cd-main-content -->
 
-	<nav id="cd_lateral_nav">
-		<ul class="cd_navigation">
-			<li class="item_has_children">
+	<nav id="cd-lateral-nav">
+		<ul id="hopahopa" runat="server" class="cd-navigation" style="display:none">
+			<li class="item-has-children">
 				<a href="#0">Services</a>
-				<ul class="sub_menu">
+				<ul class="sub-menu">
 					<li><a href="#0">Brand</a></li>
 					<li><a href="#0">Web Apps</a></li>
 					<li><a href="#0">Mobile Apps</a></li>
 				</ul>
 			</li> <!-- item-has-children -->
 
-			<li class="item_has_children">
+			<li class="item-has-children">
 				<a href="#0">Products</a>
-				<ul class="sub_menu">
+				<ul class="sub-menu">
 					<li><a href="#0">Product 1</a></li>
 					<li><a href="#0">Product 2</a></li>
 					<li><a href="#0">Product 3</a></li>
@@ -59,9 +59,9 @@
 				</ul>
 			</li> <!-- item-has-children -->
 
-			<li class="item_has_children">
+			<li class="item-has-children">
 				<a href="#0">Stockists</a>
-				<ul class="sub_menu">
+				<ul class="sub-menu">
 					<li><a href="#0">London</a></li>
 					<li><a href="#0">New York</a></li>
 					<li><a href="#0">Milan</a></li>
@@ -69,7 +69,36 @@
 				</ul>
 			</li> <!-- item-has-children -->
 		</ul> <!-- cd-navigation -->
+        <ul id="Ul1" runat="server" class="cd-navigation" style="display:none">
+			<li class="item-has-children">
+				<a href="#0">Services</a>
+				<ul class="sub-menu">
+					<li><a href="#0">Brand</a></li>
+					<li><a href="#0">Web Apps</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
 
+			<li class="item-has-children">
+				<a href="#0">Products</a>
+				<ul class="sub-menu">
+					<li><a href="#0">Product 1</a></li>
+					<li><a href="#0">Product 2</a></li>
+					<li><a href="#0">Product 3</a></li>
+					<li><a href="#0">Product 4</a></li>
+					<li><a href="#0">Product 5</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+
+			<li class="item-has-children">
+				<a href="#0">Stockists</a>
+				<ul class="sub-menu">
+					<li><a href="#0">London</a></li>
+					<li><a href="#0">New York</a></li>
+					<li><a href="#0">Milan</a></li>
+					<li><a href="#0">Paris</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+		</ul> <!-- cd-navigation -->
 		<ul class="cd-navigation cd-single-item-wrapper">
 			<li><a href="#0">Tour</a></li>
 			<li><a href="#0">Login</a></li>
