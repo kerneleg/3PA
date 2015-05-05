@@ -13,6 +13,15 @@ namespace TPA2 {
     public partial class Site1 {
         
         /// <summary>
+        /// Head1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        
+        /// <summary>
         /// cd_menu_trigger control.
         /// </summary>
         /// <remarks>
@@ -31,21 +40,21 @@ namespace TPA2 {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
         
         /// <summary>
-        /// hopahopa control.
+        /// test control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hopahopa;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl test;
         
         /// <summary>
-        /// Ul1 control.
+        /// UnderProcessing control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Ul1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl UnderProcessing;
     }
 }

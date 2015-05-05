@@ -12,7 +12,7 @@ namespace TPA2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["id"] == (1).ToString())
+            /*if (Request.QueryString["id"] == (1).ToString())
             {
                 ////finding the Nav associated with id 
                 HtmlGenericControl list = (HtmlGenericControl)Page.Master.FindControl("hopahopa");
@@ -27,7 +27,7 @@ namespace TPA2
                 
                 ////hiding the Control
                 nav.Style.Add("display", "normal");
-            }
+            }*/
         }
     }
 }

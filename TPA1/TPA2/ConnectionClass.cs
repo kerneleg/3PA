@@ -24,7 +24,7 @@ namespace TPA2
             command = new SqlCommand("", conn);
         }
 
-        public static List<KeyValuePair<string, int>> AuthenticateUser(string username, string password)
+        public static List<KeyValuePair<string, string>> AuthenticateUser(string username, string password)
         {
             //Check if user exist
             command.CommandText = "spAuthenticateUser";
@@ -40,18 +40,27 @@ namespace TPA2
 
                 conn.Open();
                 SqlDataReader rdr = command.ExecuteReader();
-                var querylist = new List<KeyValuePair<string, int>>();
+                var querylist = new List<KeyValuePair<string, string>>();
                 while (rdr.Read())
                 {
 
-                    int RetryAttempts = Convert.ToInt32(rdr["RetryAttempts"]);
-                    querylist.Add(new KeyValuePair<string, int>("RetryAttempts", RetryAttempts));
+                    string RetryAttempts = Convert.ToString(rdr["RetryAttempts"]);
+                    querylist.Add(new KeyValuePair<string, string>("RetryAttempts", RetryAttempts));
 
-                    int AccountLocked = Convert.ToInt32(rdr["AccountLocked"]);
-                    querylist.Add(new KeyValuePair<string, int>("AccountLocked", AccountLocked));
+                    string AccountLocked = Convert.ToString(rdr["AccountLocked"]);
+                    querylist.Add(new KeyValuePair<string, string>("AccountLocked", AccountLocked));
 
-                    int Authenticated = Convert.ToInt32(rdr["Authenticated"]);
-                    querylist.Add(new KeyValuePair<string, int>("Authenticated", Authenticated));
+                    string Authenticated = Convert.ToString(rdr["Authenticated"]);
+                    querylist.Add(new KeyValuePair<string, string>("Authenticated", Authenticated));
+
+                    if (Authenticated == "1")
+                    {
+                        string UserType = Convert.ToString(rdr["UserType"]);
+                        querylist.Add(new KeyValuePair<string, string>("UserType", UserType));
+
+                        string EmpName = Convert.ToString(rdr["EmpName"]);
+                        querylist.Add(new KeyValuePair<string, string>("EmpName", EmpName));
+                    }
                 }
                 rdr.Close();
                 conn.Close();
@@ -61,8 +70,8 @@ namespace TPA2
             }
             catch (Exception e)
             {
-                var errorlist = new List<KeyValuePair<string, int>>();
-                errorlist.Add(new KeyValuePair<string, int>(e.Message, -5));
+                var errorlist = new List<KeyValuePair<string, string>>();
+                errorlist.Add(new KeyValuePair<string, string>(e.Message, "-5"));
                 return errorlist;
             }
             finally

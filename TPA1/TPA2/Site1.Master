@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -38,18 +38,18 @@
 	</main> <!-- cd-main-content -->
 
 	<nav id="cd-lateral-nav">
-		<ul id="hopahopa" runat="server" class="cd-navigation" style="display:none">
+		<ul id="test" runat="server" class="cd-navigation" style="display:none">
 			<li class="item-has-children">
-				<a href="#0">Services</a>
+				<a href="#0">Profiles</a>
 				<ul class="sub-menu">
-					<li><a href="#0">Brand</a></li>
-					<li><a href="#0">Web Apps</a></li>
-					<li><a href="#0">Mobile Apps</a></li>
+					<li><a href="#0">Insurance Companies</a></li>
+					<li><a href="#0">Providers</a></li>
+					<li><a href="#0">Policy Holders</a></li>
 				</ul>
 			</li> <!-- item-has-children -->
 
 			<li class="item-has-children">
-				<a href="#0">Products</a>
+				<a href="#0">Employees</a>
 				<ul class="sub-menu">
 					<li><a href="#0">Product 1</a></li>
 					<li><a href="#0">Product 2</a></li>
@@ -69,33 +69,12 @@
 				</ul>
 			</li> <!-- item-has-children -->
 		</ul> <!-- cd-navigation -->
-        <ul id="Ul1" runat="server" class="cd-navigation" style="display:none">
+        <ul id="UnderProcessing" runat="server" class="cd-navigation" style="display:none">
 			<li class="item-has-children">
-				<a href="#0">Services</a>
+				<a href="#0">Adding Claims</a>
 				<ul class="sub-menu">
 					<li><a href="#0">Brand</a></li>
 					<li><a href="#0">Web Apps</a></li>
-				</ul>
-			</li> <!-- item-has-children -->
-
-			<li class="item-has-children">
-				<a href="#0">Products</a>
-				<ul class="sub-menu">
-					<li><a href="#0">Product 1</a></li>
-					<li><a href="#0">Product 2</a></li>
-					<li><a href="#0">Product 3</a></li>
-					<li><a href="#0">Product 4</a></li>
-					<li><a href="#0">Product 5</a></li>
-				</ul>
-			</li> <!-- item-has-children -->
-
-			<li class="item-has-children">
-				<a href="#0">Stockists</a>
-				<ul class="sub-menu">
-					<li><a href="#0">London</a></li>
-					<li><a href="#0">New York</a></li>
-					<li><a href="#0">Milan</a></li>
-					<li><a href="#0">Paris</a></li>
 				</ul>
 			</li> <!-- item-has-children -->
 		</ul> <!-- cd-navigation -->
