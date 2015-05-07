@@ -20,12 +20,13 @@
 	<title>Secondary Expandable Menu</title>
 </head>
 <body>
+    <form id="form1" runat="server">
 	<header>
 		<a id="cd-logo" href="#0"><img src="../img/Trust.png" alt="Homepage"/></a>
 		<nav id="cd-top-nav">
 			<ul>
 				<li><a href="#0">Tour</a></li>
-				<li><a href="../Login.aspx">Login</a></li>
+				<li><asp:LinkButton ID="Logout" runat="server" OnClick="Logout_Click">Logout</asp:LinkButton></li>
 			</ul>
 		</nav>
 		<a id="cd_menu_trigger" runat="server" href="#0"><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></a>
@@ -101,6 +102,6 @@
 			<a class="cd-google cd-img-replace" href="#0">Google Plus</a>
 		</div> <!-- socials -->
 	</nav>
-	
+	</form>
 </body>
 </html>

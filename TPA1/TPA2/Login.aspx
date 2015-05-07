@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TPA2.Login" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" runat="server">
-        
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">        
         <asp:Panel ID="Panel1" runat="server" CssClass="loginpanel"  >
             <div style="font-family:Arial">
             <table style="width: 40%;border: 2px solid black; empty-cells:show" >
@@ -46,7 +44,5 @@
                 </tr>
             </table>
             </div>
-        </asp:Panel>
-        
-    </form>
+        </asp:Panel>        
 </asp:Content>
