@@ -40,6 +40,8 @@
                 <tr>
                 <td style="padding-left:10px; padding-bottom:10px" colspan="2">
                         <asp:Label ID="ResultLbl" runat="server" ForeColor="Red" ></asp:Label>
+                        <br />
+                        <asp:Label ID="CookieLbl" runat="server" ForeColor="Red"></asp:Label>
                     </td>
                 </tr>
             </table>

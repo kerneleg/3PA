@@ -13,6 +13,33 @@ namespace TPA2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //check if browser support cookies or not
+            if (!IsPostBack)
+            {
+                if (Request.Browser.Cookies)
+                {
+                    //create test querystring to insure that it's first time to redirect to this page
+                    if (Request.QueryString["CheckCookie"] == null)
+                    {
+                        HttpCookie cookie = new HttpCookie("TestCookie", "1");
+                        Response.Cookies.Add(cookie);
+                        Response.Redirect("~/Login.aspx?CheckCookie=1");
+                    }
+                    else
+                    {
+                        //check if the browser enable cookies or not
+                        HttpCookie cookie = Request.Cookies["TestCookie"];
+                        if (cookie == null)
+                        {
+                            CookieLbl.Text = "We have detect that the cookies are disabled in your browser, please enable cookies to use the system correctly.";
+                        }
+                    }
+                }
+                else
+                {
+                    CookieLbl.Text = "This browser doesn't support cookies, please install on of the modern browsers that support cookies.";
+                }
+            }
             if (Session["Loggedin"] == null)
             {
                 ////finding the Nav associated with id 
@@ -53,8 +80,15 @@ namespace TPA2
                 }
                 else if (Convert.ToInt32(querylist[2].Value) == 1)
                 {
-                    Session.Add("UserType", querylist[3].Value);
-                    Session.Add("EmpName", querylist[4].Value);
+                    //saving user type and the employee name in cookie 
+                    HttpCookie cookie = new HttpCookie("UserData");
+                    cookie["UserType"]=querylist[3].Value;
+                    cookie["EmpName"] = querylist[4].Value;
+                    
+                    //set the expiration period of the cookie
+                    cookie.Expires = DateTime.Now.AddDays(30);
+
+                    Response.Cookies.Add(cookie);
                     FormsAuthentication.RedirectFromLoginPage(Usernametxt.Text, RemembermeCBox.Checked);
                 }
             }
