@@ -17,7 +17,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="<%# ResolveUrl("~/") %>js/main.js"></script> <!-- Resource jQuery -->
 
-	<title>Secondary Expandable Menu</title>
+	<title>Trust Medical</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -72,10 +72,10 @@
 		</ul> <!-- cd-navigation -->
         <ul id="UnderProcessing" runat="server" class="cd-navigation" style="display:none">
 			<li class="item-has-children">
-				<a href="#0">Adding Claims</a>
+				<a href="#0">Batchs</a>
 				<ul class="sub-menu">
-					<li><a href="#0">Brand</a></li>
-					<li><a href="#0">Web Apps</a></li>
+					<li><a href="../AddBatch.aspx">Add New Batch</a></li>
+					<li><a href="#0">View Batches</a></li>
 				</ul>
 			</li> <!-- item-has-children -->
 		</ul> <!-- cd-navigation -->
