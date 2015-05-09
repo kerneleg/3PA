@@ -43,8 +43,9 @@
 			<li class="item-has-children">
 				<a href="#0">Profiles</a>
 				<ul class="sub-menu">
-					<li><a href="#0">Insurance Companies</a></li>
-					<li><a href="#0">Providers</a></li>
+					<li><a href="#0">Add Insurance Company</a></li>
+					<li><a href="#0">View Insurance Companies</a></li>
+                    <li><a href="#0">Providers</a></li>
 					<li><a href="#0">Policy Holders</a></li>
 				</ul>
 			</li> <!-- item-has-children -->

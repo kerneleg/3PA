@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -124,38 +125,45 @@ namespace TPA2
             }
 
         }
-
+/// <summary>
+/// TODO:Add_Click need the userid and the batch type to be passed to the SP
+/// </summary>
+/// <param name="sender"></param>
+/// <param name="e"></param>
         protected void Add_Click(object sender, EventArgs e)
         {
             try
             {
-                int batchid;
+                int batchid=-1;
                 using (SqlConnection conn = new SqlConnection())
                 {
                     conn.ConnectionString = ConfigurationManager
                             .ConnectionStrings["DBCS"].ConnectionString;
                     using (SqlCommand cmd = new SqlCommand())
                     {
-                        cmd.CommandText = "INSERT INTO Batch ( ProviderID, PolicyID, CreationDate, EmpID,ReceivingDate) SELECT  Providers.ID, @policy,@creationdate,@empid,@receivingdate FROM Providers WHERE Providers.Name=@providername; ";
+                        cmd.CommandText = "spAddBatchAndReturnID";
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Clear();
                         cmd.Parameters.AddWithValue("@policy", Policylist.SelectedValue);
                         cmd.Parameters.AddWithValue("@creationdate", DateTime.Today);
                         //////////////////////////////////////////////////
                         ///// fe moshkelaaa fe el login 3andy ma3rfsh men eih by2oly fe "Redirect Loop" f wa2ft el authorization w bel taly mafesh cookie 
                         //////////////////////////////////////////////////
                         cmd.Parameters.AddWithValue("@empid", 1);
+                        //////////////////////////////////////////////////
                         cmd.Parameters.AddWithValue("@receivingdate", Calendar1.SelectedDate);
                         cmd.Parameters.AddWithValue("@providername", Providertxt.Text);
                         cmd.Connection = conn;
                         conn.Open();
-                        cmd.ExecuteNonQuery();
-                        cmd.Parameters.Clear();
-                        cmd.CommandText = "SELECT SCOPE_IDENTITY(); ";
-                        batchid=(int)(cmd.ExecuteScalar());
+                        //cmd.ExecuteNonQuery();
+                        //cmd.Parameters.Clear();
+                        //cmd.CommandText = "SELECT SCOPE_IDENTITY(); ";
+                        batchid=Convert.ToInt32((cmd.ExecuteScalar()));
                     }
                     conn.Close();
                 }
                 resultlbl.Text = "New Batch Has Been Added Succesfully";
-                if(batchid !=null)
+                if(batchid !=-1)
                 {
                     Response.Redirect("~/AddClaims?B=" + batchid);
                 }
