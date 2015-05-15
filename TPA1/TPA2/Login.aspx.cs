@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
 
 namespace TPA2
 {
@@ -93,6 +88,8 @@ namespace TPA2
 
                     Session["UserType"] = querylist[3].Value;
                     Session["EmpName"] = querylist[4].Value;
+                    Session["EmpID"] = querylist[5].Value;
+
                     if (Request.QueryString["pre"] != null)
                     {
                         Response.Redirect("~" + Request.QueryString["pre"] + "");

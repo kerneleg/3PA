@@ -75,7 +75,7 @@
 			<li class="item-has-children">
 				<a href="#0">Batchs</a>
 				<ul class="sub-menu">
-					<li><a href="../AddBatch.aspx">Add New Batch</a></li>
+					<li><a href="Batches/AddBatch.aspx">Add New Batch</a></li>
 					<li><a href="#0">View Batches</a></li>
 				</ul>
 			</li> <!-- item-has-children -->

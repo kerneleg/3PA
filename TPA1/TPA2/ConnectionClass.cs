@@ -1,19 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data.SqlClient;
 using System.Configuration;
-using System.Collections;
 using System.Data;
-using System.Text;
+using System.Data.SqlClient;
 using System.Net.Mail;
-using System.Diagnostics;
-
+using System.Text;
 namespace TPA2
 {
     public class ConnectionClass
-    {
+    {     
         private static SqlConnection conn;
         private static SqlCommand command;
 
@@ -60,6 +55,9 @@ namespace TPA2
 
                         string EmpName = Convert.ToString(rdr["EmpName"]);
                         querylist.Add(new KeyValuePair<string, string>("EmpName", EmpName));
+
+                        string EmpID = Convert.ToString(rdr["EmpID"]);
+                        querylist.Add(new KeyValuePair<string, string>("EmpID", EmpID));
                     }
                 }
                 rdr.Close();
